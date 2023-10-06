@@ -8,7 +8,6 @@
 }
 
 body{
-    font-family: 'Poppins', sans-serif;
     font-family: 'Roboto', sans-serif;
     background-color: #fff;
 }
@@ -28,41 +27,40 @@ body{
     z-index: 9999;
 }
 
-.navbar .navbar-logo{
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.navbar-logo{
     font-size: 1.8rem;
     font-weight: 700;
-    color: #279EFF;
+    color: #05b9de;
     font-style: italic;
 }
 
-.navbar .navbar-logo span{
+.navbar .navbar-logo img{
+    width: 25px;
+}
+
+.navbar-logo span{
     color: #1450A3;
 }
 
-.navbar .navbar-nav a{
+nav ul li{
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a{
     color: #1450A3;
-    display: inline-block;
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin: 0 1rem;
-    height: 600;
 }
 
-.navbar .navbar-nav a:hover{
-    color: #279EFF;
-}
-
-.navbar .navbar-nav a::after{
-    content: '';
-    display: block;
-    padding-bottom: 0.5rem;
-    border-bottom: 0.1rem solid #01214a;
-    transform: scaleX(0);
-    transition: 0.2s linear;
-}
-
-.navbar .navbar-nav a:hover::after{
-    transform: scaleX(0.5);
+nav ul li a:hover{
+    color: #05b9de;
 }
 
 .navbar .navbar-extra a{
@@ -71,45 +69,67 @@ body{
 }
 
 .navbar .navbar-extra a:hover{
-    color: #279EFF;
+    color: #05b9de;
 }
 
 #hamburger-menu{
     display: none;
 }
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 15px;
+    background-color: #1450A3;
+    outline: 3px #1450A3 solid;
+    outline-offset: -3px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px rgba(0.2, 0.2, 0.4, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: 400ms;
+  }
+  
+  .button .text {
+    color: white;
+    font-weight: 700;
+    font-size: 1em;
+    transition: 400ms;
+  }
+  
+  .button svg path {
+    transition: 400ms;
+    fill: #fff;
+  }
+  
+  .button:hover {
+    background-color: transparent;
+    outline: 3px #05b9de solid;
+  }
+  
+  .button:hover .text {
+    color: #05b9de;
+  }
+  
+  .button:hover svg path {
+    fill: #05b9de;
+  }
+
 /* navbar finish */
 
-.heading-button .cta{
-    margin-top: 0.1rem;
-    display: inline-block;
-    padding: 0.7rem 1.3rem;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #1450A3;
-    border-radius: 0.7rem;
-    transition-duration: 0.4s;
-    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
-}
-
-.heading-button .cta:hover{
-    background-color: #279EFF;
-    color: #fff;
-}
-
-.first-page .row img{
-    width: 100%;
-    margin-top: 20%;
-}
-
-/* home */
+/* home first page start */
 .first-page{
+    background-position: 50%;
+    padding-top: 56px;
     min-height: 100vh;
     display: flex;
     align-items: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image: url('../img/backgroundd.png');
+    background-image: url(https://assets.website-files.com/647f6331971124c0cca40089/648d9066bbae7004f161868b_her-bg.webp);
 }
 
 .first-page::after{
@@ -141,30 +161,199 @@ body{
 .first-page .content .learn {
     margin-top: 1rem;
     display: inline-block;
-    padding: 1rem 2.4rem;
-    font-size: 1.3rem;
     color: #fff;
-    background-color: #279EFF;
-    border-radius: 0.5rem;
-    transition-duration: 0.4s;
-    cursor: pointer;
+    border: 1px solid #1450A3;
+    border-radius: 4px;
+    padding: 0.8em 2em;
+    background: #1450A3;
     box-shadow: 2px 2px 3px rgba(1, 1, 3, 0.5);
+    transition: 400ms;
 }
+
+.first-page .learn{
+    color: white;
+    font-weight: 700;
+    font-size: 1.2em;
+    transition: 400ms;
+}
+
 .first-page .content .learn:hover{
-    background-color: #fff;
-    color: black;
+    color: #000;
+    transform: translate(-0.25rem,-0.25rem);
+    background: #fff;
+    box-shadow: 0.25rem 0.25rem #000;
 }
-/* home finish */
+
+.first-page .content .learn:active{
+    transform: translate(0);
+    box-shadow: none;
+}
+
+.first-page .row img{
+    width: 100%;
+    margin-top: 20%;
+}
+
+.home-page-2{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.home-page-2::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+}
+
+.home-page-2 .page-2-content{
+    padding: 3rem 2%;
+    max-width: 60rem;
+    transition: 0.4s;
+}
+
+.home-page-2 .page-2-content h3{
+    color: #05b9de;
+    font-style: bold;
+    font-size: 1.7rem;
+}
+
+.home-page-2 .page-2-content h2{
+    margin-top: 1.5rem;
+    font-size: 3.5rem;
+    color: #1450A3;
+    text-shadow: 2px 2px 3px rgba(1,1,2,0.5);
+}
+
+.home-page-2 .page-2-content p{
+    font-size: 1.5rem;
+    text-align: justify;
+    margin-top: 0.5rem;
+    line-height: 2rem;
+    font-weight: 400;
+    color: #656d72;
+}
+/* home first page finish */
+
+/* home page 3 */
+.pre-tittle{
+    margin: 0 auto;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: #05b9de;
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 0.9rem;
+   }
+  
+   .pre-tittle::before{
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: #05b9de;
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+   }
+  
+   /* layout */
+   .grid-3{
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+   }
+
+   #home-page3{
+    padding: 6rem 0;
+    background-image: url(https://assets.website-files.com/647f6331971124c0cca40089/648ef02dff75067218194fbe_our%20clinic%20bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .home-page-3{
+    border-radius: 0.7rem;
+    overflow: hidden;
+    border: 1px solid #eee;
+    height: 450px;
+    width: 300px;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    box-shadow: 0 0 23px -2px rgba(82, 80, 102, .08);
+  }
+  
+  .home-page-3-cover{
+    height: 250px;
+  }
+  
+  .home-page-3-cover img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .home-page-3-info{
+    padding: 2rem 1.5rem;
+  }
+  
+  .home-page-3-tittle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .home-page-3 h4{
+    font-weight: 500;
+    font-size: 1.05rem;
+  }
+  
+  .home-page-3-tittle a svg:hover{
+    fill: #05b9de;
+  }
+  
+  .home-page-3-tittle a svg{
+    transition: 0.2s ease-in-out;
+  }
+  
+  .home-page-3-tags{
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+   .home-page-3-tags div{
+    font-size: .9rem;
+    border: 1px solid #eee;
+    padding: .4rem 1rem;
+    color: #000;
+   }
+  
+
+/* home page 3 finish */
+
+.section-title{
+    margin: 1rem 0 4rem;
+    font-size: 1.9rem;
+    text-align: center;
+    color: #1450A3;
+   }
 
 /* about start */
 .about{
+    background-position: 50%;
+    padding-top: 56px;
     min-height: 100vh;
     display: flex;
     align-items: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image: url('../img/backgroundd.png');
+    background-image: url(https://assets.website-files.com/647f6331971124c0cca40089/648d9066bbae7004f161868b_her-bg.webp);
 }
 
 .about-img img {
@@ -199,87 +388,160 @@ body{
     color: #fff; 
 }
 
-.about .content .kontak {
+.about .content .btn-contact {
     margin-top: 1rem;
     display: inline-block;
-    padding: 1rem 2.4rem;
-    font-size: 1.3rem;
     color: #fff;
-    background-color: #279EFF;
-    border-radius: 0.5rem;
-    transition-duration: 0.4s;
-    cursor: pointer;
+    border: 1px solid #1450A3;
+    border-radius: 4px;
+    padding: 0.8em 2em;
+    background: #1450A3;
     box-shadow: 2px 2px 3px rgba(1, 1, 3, 0.5);
-}
-.about .content .kontak:hover{
-    background-color: #fff;
-    color: black;
+    transition: 400ms;
 }
 
-/* next about */
+.about .btn-contact{
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.2em;
+    transition: 400ms;
+}
+.about .content .btn-contact:hover{
+    color: #000;
+    transform: translate(-0.25rem,-0.25rem);
+    background: #fff;
+    box-shadow: 0.25rem 0.25rem #000;
+}
+
+.about .content .btn-contact:active{
+    transform: translate(0);
+    box-shadow: none;
+}
+/* about page 1 finish */
+
+/*about page 2 */
 .next-img img{
     width: 40rem;
     margin-top: 1rem;
     transition-duration: 0.4s;
 }
 
-.next{
+.about-page-2{
     min-height: 100vh;
     display: flex;
     align-items: center;
 }
 
-.next::after{
+.about-page-2::after{
     content: '';
     display: block;
     position: absolute;
     width: 100%;
 }
 
-.next .isi {
+.about-page-2 .isi {
     padding: 3rem 2%;
     max-width: 60rem;
     transition-duration: 0.4s;
 }
 
-.next .isi h3{
-    color: #279EFF;
+.about-page-2 .isi h3{
+    color: #05b9de;
     font-style: bold;
     font-size: 1.7rem;
 }
-.next .isi h2{
+.about-page-2 .isi h2{
     margin-top: 1.5rem;
     font-size: 3.5rem;
     color: #1450A3;
     text-shadow: 2px 2px 3px rgba(1,1,2,0.5);
 }
 
-.next .isi p{
+.about-page-2 .isi p{
     font-size: 1.5rem;
     text-align: justify;
     margin-top: 0.5rem;
     line-height: 2rem;
-    font-weight: 80;
+    font-weight: 400;
+    color: #656d72;
+}
+/* about page 2 finish */
+
+/* about page 3 start */
+.about-page-3{
+    padding-top: 100px;
+}
+
+.about-page-3{
+    background-image: url(https://assets.website-files.com/647f6331971124c0cca40089/648ef02dff75067218194fbe_our%20clinic%20bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about-page-3 .box-container-about{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -157px;
+}
+
+.about-page-3 .box-container-about .box-about{
+    height: 23rem;
+    width: 21rem;
+    background: #fff;
+    text-align: center;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    box-shadow: 0 0 23px -2px rgba(82, 80, 102, .08);
+    margin: 2rem;
+}
+
+.about-page-3 .box-container-about .box-about .img-box{
+    height: 5rem;
+    width: 5rem;
+    margin-top: 3.5rem;
+}
+
+.about-page-3 .box-container-about .box-about h3{
+    margin: 1.2rem 0;
+    font-weight: 700;
+    font-size: 2.5rem;
     color: #1450A3;
 }
 
-.first-page .content .learn {
-    margin-top: 1rem;
-    display: inline-block;
-    padding: 1rem 2.4rem;
-    font-size: 1.3rem;
-    color: #fff;
-    background-color: #279EFF;
-    border-radius: 0.5rem;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    box-shadow: 2px 2px 3px rgba(1, 1, 3, 0.5);
+.about-page-3 .box-container-about .box-about p{
+    color: #656d72;
 }
-.first-page .content .learn:hover{
-    background-color: #fff;
-    color: black;
+/* about page 3 finish */
+
+/* about page 4 start */
+#about-page4{
+    padding: 6rem 0;
+    background-image: url(https://assets.website-files.com/647f6331971124c0cca40089/648ef02dff75067218194fbe_our%20clinic%20bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-/* about finish */
+
+.about-link img{
+    margin-top: -100px;
+    margin-left: 110px;
+}
+
+.about-page-4-tittle h4{
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    color: #1450A3;
+}
+
+.about-page-4-tittle p{
+    text-align: center;
+    font-size: .9rem;
+}
+
+
+/* about page 4 finish */
 
 /* login */
 .login-body {
@@ -349,89 +611,117 @@ input {
     border: 1px solid rgb(18, 56, 180);
 }
 
-button {
+.btn-login{
     border: none;
     outline: none;
-    padding: 8px;
-    width: 252px;
+    padding: 7px;
+    width: 250px;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
     margin-top: 20px;
     border-radius: 9dvh;
     background: #279EFF;
+    transition: 400ms;
 }
 
-button:hover {
+.btn-login:hover{
     background: #1450A3;
 }
-/* login end */
+/* login finish */
 
-/* contact */
-.contact{
-    padding: 8rem 7% 1.4rem;
-}
+/* contact start*/
+#contact{
+    padding: 9rem 0;
+    background: #fff;
+   }
+  
+   .contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+    gap: 3rem;
+   }
 
-.contact h2{
+   .content-left h2{
+    font-weight: 600;
+    font-size: 3rem;
     text-align: center;
-    font-size: 2.6rem;
-    margin-bottom: 1rem;
-    color: #279EFF;
-}
+    color: #05b9de;
+    text-shadow: 2px 2px 3px rgba(1,1,3,0.5);
+   }
 
-.contact h2 span{
+   .content-left h2 span{
     color: #1450A3;
-}
-
-.contact p{
-    text-align: center;
-    max-width: 30rem;
-    margin: auto;
-    font-weight: 100;
-    line-height: 1.6;
-    color: #1450A3;
-}
-
-.contact .row{
+   }
+  
+   .contact-form div{
+    margin-bottom: 1.4rem;
+   }
+  
+   .contact-form input, .contact-form textarea{
+    width: 170%;
+    padding: .75rem 1.3rem;
+    font-family: "Roboto", sans-serif;
+    background: #f3fcfe;
+    border: 1px solid #f1f1f1;
+    border-radius: 3px;
+    resize: none;
+   }
+  
+   .contact-form input::placeholder, .contact-form textarea::placeholder{
+    color: #9d9fa1;
+   }
+  
+   .contact-form input:focus, .contact-form textarea:focus{
+    outline: none;
+    border: 1px solid #7d7d7d;
+   }
+  
+   .btn-submit{
+    width: 170%;
+    padding: .75rem 1.5rem;
+    background-color: #1450A3;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+   }
+  
+   .btn-submit:hover{
+    background: #05b9de;
+   }
+  
+  .contact-item{
     display: flex;
-    margin-top: 2rem;
-    background-color: #222;
-}
-
-.contact .row .map{
-    flex: 1 1 40rem;
-    width: 100%;
-    object-fit: cover;
-}
-
-.contact .row form{
-    flex: 1 1 40rem;  
-    padding: 5rem 2rem;
-    text-align: center; 
-}
-
-.contact .row form .input-grup{
+    gap: 1.5rem;
+  }
+  
+   .contact-item-icon{
+    margin-top: 5rem;
+    background: #f3fcfe;
+    width: 53px;
+    height: 53px;
+    border-radius: 9px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin-top: 2rem;
-    background: #eee;
-    border: 1px solid #eee;
-    padding-left: 2rem;   
-}
+   }
+  
+   .contact-item-icon svg{
+    fill: #05b9de;
+   }
+  
+   .contact-item-detail h4{
+    margin-top: 5rem;
+    margin-bottom: 0.6rem;
+   }
+/* contact finish */
 
-.contact .row form .input-grup input{
-    width: 100%;
-    padding: 1rem;
-    font-size: 1.4rem;
-    background: none;
-    color: black;
-}
-/* contact end */
-
-/* book */
+/* book start*/
 .book{
     padding: 8rem 5% 1.4rem;
-    background-color: #d7dbe0;
+    background-color: #eee;
 }
 
 .book h2 {
@@ -458,13 +748,12 @@ button:hover {
 .book .row{
     display: flex;
     margin-top: 2rem;
-    background-color: #eee;
+    background-color: #fbfbfb;
     border-radius: 2rem;
 }
 
 .book .row img{
-    flex: 1 1 40rem;
-    width: 100%;
+    width: 30%;
     object-fit: cover;
 }
 
@@ -481,25 +770,123 @@ button:hover {
 }
 
 .book .row form{
-    flex: 1 1 40rem;
-    padding: 5rem 2rem;
-    text-align: center;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   max-width: 400px;
+   width: 100%;
+   height: 100%;
 }
 
-
-.book .row form .input-wrapper{
+.flex{
     display: flex;
-    align-items: center;
-    margin-top: 2rem;
-    padding-left: 2rem;
+    width: 100%;
+    gap: 6px;
 }
 
-.book .row form .input-wrapper input {
+.form label .input{
     width: 100%;
-    padding: 1rem;
-    font-size: 1.4rem;
-    background: #fff;
-    color: black;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+}
+
+.input{
+    border:  1px solid #9d9fa1;
+    box-shadow: 0px 5px 5px -6px black;
+}
+
+select{
+    border-radius: 3px;
+    border:  1px solid #9d9fa1;
+    box-shadow: 0px 5px 5px -6px black;
+}
+
+.input01 {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid #9d9fa1;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px -6px black;
+  }
+
+.btn{
+    margin-top: 1rem;
+    height: 50px;
+    width: 385px;
+    font-size: 1.2rem;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid #9d9fa1;
+    overflow: hidden;
+    border-radius: 20px;
+    color: #333;
+    transition: all 0.5s ease-in-out;
+    justify-content: center;
+}
+
+.btn::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+    background-color: #333;
+    border-radius: 20px;
+    visibility: hidden;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+}
+
+.btn:hover{
+    color: #000;
+    background-color: #1450A3;
+    border: none;
+}
+
+/* book finish */
+
+/* Footer */
+.footer{
+    text-align: center;
+    background-image: url(https://assets.website-files.com/647f6331971124c0cca40089/648ef02dff75067218194fbe_our%20clinic%20bg.webp);
+}
+
+.footer .icons{
+    padding: 1.2rem 0;
+}
+
+.footer .icons a{
+    height: 3.5rem;
+    width: 3.5rem;
+    line-height: 3.2rem;
+    text-align: center;
+    border-radius: 50%;
+    color: #1450A3;
+    border: .2rem solid #1450A3;
+    font-size: 2rem;
+    margin: 0 .1rem;
+    transition: .2s linear;
+}
+
+.footer .icons a:hover{
+    color: #eee;
+    background-color: #1450A3;
+}
+
+.footer .credit{
+    font-size: 1.5rem;
+    border-top: 0.1rem solid #3e3f40;
+    margin: 0 auto;
+    color: #3e3f40;
+    width: 90%;
+    padding: 1rem 0;
+}
+
+.footer span{
+    color: #1450A3;
 }
 
 /* Media Queris */
@@ -515,6 +902,7 @@ button:hover {
         font-size: 75%;
     }
 
+    /* nav start */
     #hamburger-menu{
         display: inline-block;
     }
@@ -523,6 +911,7 @@ button:hover {
         position: absolute;
         top: 100%;
         right: -100%;
+        font-weight: 600;
         background-color: #fff;
         width: 30rem;
         height: 100vh;
@@ -533,28 +922,21 @@ button:hover {
         right: 0;
     }
 
-    .navbar .navbar-nav a{
+    .navbar .navbar-nav ul{
         color: #1450A3;
         display: block;
         margin: 1.5rem;
         padding: 0.5rem;
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 
-    .navbar .navbar-nav a::after{
-        transform-origin: 0 0;
+    .navbar .navbar-nav ul li a{
+        margin-top: 3rem;
     }
 
-    .navbar .navbar-nav a:hover::after{
-        transform: scaleX(0.2);
-    }
+    /* nav finish */
 
-    .cta{
-        position: absolute;
-        top: 100%;
-        right: -100%;
-    }
-
+    /* home first page start */
     .first-page, .about, .next {
         flex-wrap: wrap;
     }
@@ -578,7 +960,17 @@ button:hover {
     .intro-image img{
         margin-top: 0.3rem;
     }
+    
+    .contact .content-left{
+        padding-right: 15rem;
+    }
 
+    .contact .contact-right{
+        padding-left: 8rem;
+    }
+    /* home first page finish */
+
+    /* about start */
     .about .isi{
         margin-top: 0.5rem;
     }
@@ -587,11 +979,66 @@ button:hover {
         width: 39rem;
         margin-top: 5rem;
     }
+    
+    /* about finish */
 
-    .contact .row{
+    .next-page .konten p{
+        padding: 1.5rem 2rem;
+    }
+
+    .next-page::before{
+        display: none;
+    }
+
+    .book .row img{
+        display: none;
+    }
+
+    .about-page-2{
         flex-wrap: wrap;
     }
 
+    .about-page-2 img{
+        padding-left: 3rem;
+        width: 100%;
+        padding-bottom: 10rem;
+    }
+
+    .about-page-2 .isi h2{
+        font-size: 3.3rem;
+        line-height: 5rem;
+    }
+
+    .about-page-2 h3{
+        margin-top: 5rem;
+    }
+    
+    .about-page-2 .isi p{
+        font-size: 1.4rem;
+        line-height: 2.6rem;
+    }
+
+    .home-page-2{
+        flex-wrap: wrap;
+    }
+
+    .home-page-2 .page-2-content h2{
+        font-size: 3.3rem;
+        line-height: 5rem;
+    }
+
+    .home-page-2 .page-2-content h3{
+        margin-top: 5rem;
+    }
+
+    .home-page-2 .page-2-content p{
+        font-size: 1.4rem;
+        line-height: 2.6rem;
+    }
+
+    .home-page-2 img{
+        margin-top: 2rem;
+    }
 }
 /* Mobile */
 @media (max-width: 450px){

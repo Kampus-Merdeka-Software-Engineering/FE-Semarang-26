@@ -5,25 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sahih - Login</title>
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,600;1,700&family=Roboto:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- feather icon -->
     <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Link css -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
 </head>
 <body>
     <nav class="navbar">
         <a href="#"class="navbar-logo">Sahih<span>Sejahtera</span></a>
 
         <div class="navbar-nav">
-            <a href="home.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="book.html">Book an appointment</a>
-        </div>
-        <div class="heading-button">
-            <a href="login.html" class="cta">Login</a>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="book.html">Book an appointment</a></li>
+                <li><a href="login.html" target="_blank"><button class="button">
+                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M16 2v7h-2v-5h-12v16h12v-5h2v7h-16v-20h16zm2 9v-4l6 5-6 5v-4h-10v-2h10z"/></svg>
+                    <p class="text">Login</p>
+                  </button></a></li>
+            </ul>
         </div>
         <div class="navbar-extra">
             <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
@@ -42,7 +50,7 @@
                 <br>
                 <label for="">Password</label>
                 <input type="password" placeholder="Password">
-                <button> Login </button>
+                <button class="btn-login"> Login </button>
                 <p>
                     <a href="#">Forgot Password?</a>
                 </p>
@@ -53,6 +61,21 @@
         </div>
     </div>
 </section>
+
+<!-- footer -->
+<section class="footer" id="footer">
+    <div class="icons">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-github"></a>
+    </div>
+
+    <div class="credit">&#169; Group 26 <span>2023</span> | all rights reserved.</div>
+</section>
+
+<!-- jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <!-- feather icons -->
 <script>
     feather.replace();
