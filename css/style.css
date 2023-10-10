@@ -12,6 +12,10 @@ body{
     background-color: #fff;
 }
 
+link{
+    display: none;
+}
+
 /* navbar */
 .navbar{
     display: flex;
