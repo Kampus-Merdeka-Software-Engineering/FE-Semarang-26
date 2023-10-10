@@ -13,3 +13,23 @@ document.addEventListener('click', function(e) {
     navbarNav.classList.remove('active');
     }
 })
+
+document.addEventListener('DOMContentLoaded', () => {
+    const userList = document.getElementById('user-list');
+  
+    // Lakukan permintaan GET ke backend
+    fetch('https://indigo-beaver-wrap.cyclic.app/login')
+      .then(response => response.json())
+      .then(data => {
+        // Tampilkan data pengguna di halaman
+        data.forEach(user => {
+          const listItem = document.createElement('li');
+          listItem.textContent = user.name;
+          userList.appendChild(listItem);
+        });
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  });
+  
