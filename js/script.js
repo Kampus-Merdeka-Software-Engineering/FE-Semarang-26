@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
           // Periksa apakah login berhasil
           if (data.success) {
               welcomeMessage.textContent = `Selamat datang, ${data.username}!`;
+              window.location.href = "index.html";
             } else {
               welcomeMessage.textContent = "Login gagal. Periksa kembali username dan password Anda.";
           }
