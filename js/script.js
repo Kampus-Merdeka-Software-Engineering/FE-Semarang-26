@@ -81,7 +81,7 @@ formBook.addEventListener("submit", (event) =>{
     
     console.log(first_name, last_name, email, date, select, message);
 
-    fetch("https://indigo-beaver-wrap.cyclic.app/book",{
+    fetch("https://indigo-beaver-wrap.cyclic.app/bookings",{
         method: "POST",
         headers: {
             "Content-Type": "application/json"
