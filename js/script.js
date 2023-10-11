@@ -14,8 +14,8 @@ document.addEventListener('click', function(e) {
     }
 })
 
-document.addEventListener("DOMContentLoaded", function() {
-  const loginForm = document.getElementById("loginForm");
+document.addEventListener("DOMContentLoaded", function () {
+  const loginForm = document.getElementById("login-form");
   const welcomeMessage = document.getElementById("welcome-message");
 
   loginForm.addEventListener("submit", function (event) {
@@ -44,18 +44,20 @@ document.addEventListener("DOMContentLoaded", function() {
       .then(data => {
           // Periksa apakah login berhasil
           if (data.success) {
-              welcome-message.innerHTML = `Selamat datang, ${data.username}!`;
+              welcomeMessage.innerHTML = `Selamat datang, ${data.username}!`;
             } else {
-              welcome-message.innerHTML = "Login gagal. Periksa kembali username dan password Anda.";
+              welcomeMessage.innerHTML = "Login gagal. Periksa kembali username dan password Anda.";
           }
       })
       .catch(error => {
           console.error("Terjadi kesalahan: " + error);
-          welcome-message.innerHTML = "Terjadi kesalahan. Silakan coba lagi nanti.";
-      });
-    });
+          welcomeMessage.innerHTML = "Terjadi kesalahan. Silakan coba lagi nanti.";
+      });
+    });
 });
 
+
+ 
 // document.addEventListener("DOMContentLoaded", function () {
 //     var formBook = document.getElementById("formBook");
 //     if (formBook) {
