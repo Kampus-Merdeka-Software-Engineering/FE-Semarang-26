@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  const formBook = document.getElementById("formBook");
+  const formBook = document.getElementById("form-book");
   formBook.addEventListener("submit", function (event) {
     event.preventDefault();
 
