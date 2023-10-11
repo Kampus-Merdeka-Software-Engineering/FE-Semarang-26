@@ -15,7 +15,7 @@ document.addEventListener('click', function(e) {
 })
 
 document.addEventListener("DOMContentLoaded", function () {
-  const loginForm = document.getElementById("loginForm");
+  const loginForm = document.getElementById("login-form");
   const welcomeMessage = document.getElementById("welcome-message");
 
   loginForm.addEventListener("submit", function (event) {
@@ -32,19 +32,23 @@ document.addEventListener("DOMContentLoaded", function () {
           password: password
       };
 
-      // Kirim permintaan POST ke API
-      fetch(apiUrl, {
+      // Ubah metode HTTP menjadi POST
+      const options = {
           method: "POST",
           body: JSON.stringify(requestData),
           headers: {
               "Content-Type": "application/json"
           }
-      })
+      };
+
+      // Kirim permintaan ke API
+      fetch(apiUrl, options)
       .then(response => response.json())
       .then(data => {
           // Periksa apakah login berhasil
           if (data.success) {
               welcomeMessage.textContent = `Selamat datang, ${data.username}!`;
+              // Tambahkan kode ini untuk mengarahkan pengguna ke index.html
               window.location.href = "index.html";
             } else {
               welcomeMessage.textContent = "Login gagal. Periksa kembali username dan password Anda.";
@@ -56,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 });
+
 
 
 
