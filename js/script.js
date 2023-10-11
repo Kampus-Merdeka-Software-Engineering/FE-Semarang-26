@@ -76,44 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //     }
 // });
 
-// //booking
-// const formBook = document.getElementById("formBook")
-// formBook.addEventListener("submit", (event) =>{
-//     event.preventDefault();
-    
-//     const first_name = document.getElementById("first_name").value
-//     const last_name = document.getElementById("last_name").value
-//     const email = document.getElementById("email").value
-//     const date = document.getElementById("date").value
-//     const select = document.getElementById("select").value
-//     const message = document.getElementById("message").value
-    
-//     console.log(first_name, last_name, email, date, select, message);
 
-//     fetch("https://indigo-beaver-wrap.cyclic.app/bookings",{
-//         method: "POST",
-//         headers: {
-//             "Content-Type": "application/json"
-//         },
-//         body: JSON.stringify({
-//             first_name: first_name,
-//             last_name: last_name,
-//             email: email,
-//             date: date,
-//             select: select,
-//             message: message
-//         }) 
-//     }).then( (res) =>{
-//         if (res.ok){
-//             alert("Add Book an appointment Successfully!")
-//         }else{
-//             alert("Add Book an appointment Not Successfully!")
-//         }
-//         console.log(res);
-//     }).catch((error) =>{
-//         alert(`Error messages: ${error.messages}`)
-//     })
-// });
 document.addEventListener("DOMContentLoaded", function () {
   const formBook = document.getElementById("formBook");
   formBook.addEventListener("submit", function (event) {
