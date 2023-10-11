@@ -15,7 +15,7 @@ document.addEventListener('click', function(e) {
 })
 
 document.addEventListener("DOMContentLoaded", function () {
-  const loginForm = document.getElementById("login-form");
+  const loginForm = document.getElementById("loginForm");
   const welcomeMessage = document.getElementById("welcome-message");
 
   loginForm.addEventListener("submit", function (event) {
