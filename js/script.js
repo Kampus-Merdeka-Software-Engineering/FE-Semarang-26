@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
           if (data.success) {
               welcomeMessage.textContent = `Selamat datang, ${data.username}!`;
               // Tambahkan kode ini untuk mengarahkan pengguna ke index.html
-              window.location.href = "index.html";
+              window.location.href = "https://kampus-merdeka-software-engineering.github.io/index.html";
             } else {
               welcomeMessage.textContent = "Login gagal. Periksa kembali username dan password Anda.";
           }
