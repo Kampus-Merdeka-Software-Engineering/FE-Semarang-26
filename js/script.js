@@ -44,14 +44,14 @@ document.addEventListener("DOMContentLoaded", function() {
       .then(data => {
           // Periksa apakah login berhasil
           if (data.success) {
-              welcomeMessage.innerHTML = `Selamat datang, ${data.username}!`;
+              welcome-message.innerHTML = `Selamat datang, ${data.username}!`;
             } else {
-              welcomeMessage.innerHTML = "Login gagal. Periksa kembali username dan password Anda.";
+              welcome-message.innerHTML = "Login gagal. Periksa kembali username dan password Anda.";
           }
       })
       .catch(error => {
           console.error("Terjadi kesalahan: " + error);
-          welcomeMessage.innerHTML = "Terjadi kesalahan. Silakan coba lagi nanti.";
+          welcome-message.innerHTML = "Terjadi kesalahan. Silakan coba lagi nanti.";
       });
     });
 });
