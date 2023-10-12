@@ -59,14 +59,12 @@ document.addEventListener("DOMContentLoaded", function () {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          id: booking.id,
-          first_name: booking.first_name,
-          last_name: booking.last_name,
-          email: booking.email,
-          date: booking.date,
-          select: booking.select,
-          message: booking.message,
-          id_patient: booking.id_patient,
+          first_name: firstName,
+          last_name: lastName,
+          email: email,
+          date: date,
+          select: select,
+          message: message,
         }),
       })
         .then((res) => {
