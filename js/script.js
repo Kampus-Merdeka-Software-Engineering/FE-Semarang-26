@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((response) => response.json())
         .then((data) => {
           if (data.message === "Berhasil login") {
-            welcomeMessage.textContent = `Selamat datang, ${data.username}!`;
+            welcomeMessage.textContent = `Selamat datang, ${email}!`;
             window.location.href =
               "https://kampus-merdeka-software-engineering.github.io/FE-Semarang-26/index.html";
           } else {
@@ -59,12 +59,14 @@ document.addEventListener("DOMContentLoaded", function () {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          first_name: firstName,
-          last_name: lastName,
-          email: email,
-          date: date,
-          select: select,
-          message: message,
+          id: booking.id,
+          first_name: booking.first_name,
+          last_name: booking.last_name,
+          email: booking.email,
+          date: booking.date,
+          select: booking.select,
+          message: booking.message,
+          id_patient: booking.id_patient,
         }),
       })
         .then((res) => {
