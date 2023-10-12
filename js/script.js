@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     formBook.addEventListener("submit", function (event) {
       event.preventDefault();
 
+      const id = document.getElementById("id").value;
       const firstName = document.getElementById("first_name").value;
       const lastName = document.getElementById("last_name").value;
       const email = document.getElementById("email").value;
@@ -59,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          id : id,
           first_name: firstName,
           last_name: lastName,
           email: email,
