@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const email = document.getElementById("email").value;
       const message = document.getElementById("message").value;
 
-      fetch("https://indigo-beaver-wrap.cyclic.app/bookings", {
+      fetch("https://indigo-beaver-wrap.cyclic.app/contacts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
