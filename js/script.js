@@ -1,15 +1,13 @@
-// Toggle class active
 const navbarNav = document.querySelector('.navbar-nav');
-// ketika menu diklik
-document.querySelector('#hamburger-menu').onclick = (e) => {
+const hamburgerMenu = document.querySelector('#hamburger-menu');
+
+hamburgerMenu.onclick = (e) => {
   navbarNav.classList.toggle('active');
   e.preventDefault();
 };
 
-//klik luar side bar untuk menghilangkan nav
-const hamburger = document.querySelector('#hamburger-menu');
 document.addEventListener('click', function (e) {
-  if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
+  if (!hamburgerMenu.contains(e.target) && !navbarNav.contains(e.target)) {
     navbarNav.classList.remove('active');
   }
 });
@@ -24,15 +22,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    // Ganti URL dengan URL API yang sesuai
-    const apiUrl = "https://indigo-beaver-wrap.cyclic.app/login"; // Contoh URL API
+    const apiUrl = "https://indigo-beaver-wrap.cyclic.app/login";
 
     const requestData = {
       email: email,
       password: password
     };
 
-    // Ubah metode HTTP menjadi POST
     const options = {
       method: "POST",
       body: JSON.stringify(requestData),
@@ -41,40 +37,29 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     };
 
-    // Kirim permintaan ke API
     fetch(apiUrl, options)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
-        // Periksa apakah login berhasil
-        if (data.success) {
-          console.log("masuk");
-
+        if (data.message === "Berhasil login") {
           welcomeMessage.textContent = `Selamat datang, ${data.username}!`;
-          // Tambahkan kode ini untuk mengarahkan pengguna ke index.html
           window.location.href = "https://kampus-merdeka-software-engineering.github.io/FE-Semarang-26/index.html";
         } else {
-          console.log("ga");
           welcomeMessage.textContent = "Login gagal. Periksa kembali username dan password Anda.";
         }
       });
   });
-});
 
-document.addEventListener("DOMContentLoaded", function () {
   const formBook = document.getElementById("form-book");
   if (formBook) {
     formBook.addEventListener("submit", function (event) {
       event.preventDefault();
 
-      const first_name = document.getElementById("first_name").value;
-      const last_name = document.getElementById("last_name").value;
+      const firstName = document.getElementById("first_name").value;
+      const lastName = document.getElementById("last_name").value;
       const email = document.getElementById("email").value;
       const date = document.getElementById("date").value;
       const select = document.getElementById("select").value;
       const message = document.getElementById("message").value;
-
-      console.log(first_name, last_name, email, date, select, message);
 
       fetch("https://indigo-beaver-wrap.cyclic.app/bookings", {
         method: "POST",
@@ -82,8 +67,8 @@ document.addEventListener("DOMContentLoaded", function () {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          first_name: first_name,
-          last_name: last_name,
+          first_name: firstName,
+          last_name: lastName,
           email: email,
           date: date,
           select: select,
@@ -91,11 +76,10 @@ document.addEventListener("DOMContentLoaded", function () {
         })
       }).then((res) => {
         if (res.ok) {
-          alert("Add Book an appointment Successfully!");
+          alert("Successfully booked an appointment!");
         } else {
-          alert("Add Book an appointment Not Successfully!");
+          alert("Failed to book an appointment!");
         }
-        console.log(res);
       }).catch((error) => {
         console.error("Error:", error);
       });
