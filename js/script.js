@@ -78,8 +78,6 @@ document.addEventListener("DOMContentLoaded", function () {
           console.error("Error:", error);
         });
     });
-  } else {
-    console.error("Element with ID 'form-book' not found.");
   }
 
   hamburgerMenu.onclick = (e) => {
