@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (data.success) {
         console.log("masuk")
 
-        welcomeMessage.textContent = Selamat datang, ${data.username}!;
+        welcomeMessage.textContent = `Selamat datang, ${data.username}!`;
         // Tambahkan kode ini untuk mengarahkan pengguna ke index.html
         window.location.href = "https://kampus-merdeka-software-engineering.github.io/FE-Semarang-26/index.html";
       } else {
