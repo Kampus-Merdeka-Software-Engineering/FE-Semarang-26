@@ -46,7 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
     formBook.addEventListener("submit", function (event) {
       event.preventDefault();
 
-      const id = document.getElementById("id").value;
       const firstName = document.getElementById("first_name").value;
       const lastName = document.getElementById("last_name").value;
       const email = document.getElementById("email").value;
@@ -60,7 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          id : id,
           first_name: firstName,
           last_name: lastName,
           email: email,
@@ -74,6 +72,40 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Successfully booked an appointment!");
           } else {
             alert("Failed to book an appointment!");
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    });
+  }
+
+  if (formContact) {
+    formContact.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const id = document.getElementById("id").value;
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+
+      fetch("https://indigo-beaver-wrap.cyclic.app/bookings", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          id: id,
+          name: name,
+          email: email,
+          message: message,
+        }),
+      })
+        .then((res) => {
+          if (res.ok) {
+            alert("Successfully to sent message");
+          } else {
+            alert("Failed to send message");
           }
         })
         .catch((error) => {
