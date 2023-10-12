@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const loginForm = document.getElementById("login-form");
   const welcomeMessage = document.getElementById("welcome-message");
   const formBook = document.getElementById("form-book");
-  const formContact = document.getElementById("form-contact");
+  const formContact = document.getElementById("contact-form");
 
   if (loginForm) {
     loginForm.addEventListener("submit", function (event) {
