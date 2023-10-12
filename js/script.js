@@ -45,21 +45,19 @@ document.addEventListener("DOMContentLoaded", function () {
       fetch(apiUrl, options)
       .then(response => response.json())
       .then(data => {
-          // Periksa apakah login berhasil
-          if (data.success) {
-              welcomeMessage.textContent = `Selamat datang, ${data.username}!`;
-              // Tambahkan kode ini untuk mengarahkan pengguna ke index.html
-              window.location.href = "https://kampus-merdeka-software-engineering.github.io/FE-Semarang-26/index.html";
-            } else {
-              welcomeMessage.textContent = "Login gagal. Periksa kembali username dan password Anda.";
-          }
-      })
-      .catch(error => {
-          console.error("Terjadi kesalahan: " + error);
-          welcomeMessage.textContent = "Terjadi kesalahan. Silakan coba lagi nanti.";
-      });
-    });
-});
+    console.log(data)
+    // Periksa apakah login berhasil
+    if (data.success) {
+        console.log("masuk")
+
+        welcomeMessage.textContent = Selamat datang, ${data.username}!;
+        // Tambahkan kode ini untuk mengarahkan pengguna ke index.html
+        window.location.href = "https://kampus-merdeka-software-engineering.github.io/FE-Semarang-26/index.html";
+      } else {
+        console.log("ga")
+        welcomeMessage.textContent = "Login gagal. Periksa kembali username dan password Anda.";
+    }
+})
 
 
 
