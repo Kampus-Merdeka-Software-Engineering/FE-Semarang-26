@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
           console.log(res);
         }).catch((error) => {
-          alert(Error messages: ${error.messages})
+         alert('Error messages: ' + error.messages);
         });
       });
     } else {
