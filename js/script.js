@@ -33,6 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((data) => {
           if (data.message === "Berhasil login") {
             welcomeMessage.textContent = `Selamat datang, ${email}!`;
+            window.location.href =
+              "https://kampus-merdeka-software-engineering.github.io/FE-Semarang-26/index.html";
           } else {
             welcomeMessage.textContent =
               "Login gagal. Periksa kembali username dan password Anda.";
