@@ -105,6 +105,8 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((res) => {
           if (res.ok) {
             alert("Successfully to sent message");
+             window.location.href =
+              "https://formspree.io/f/xrgwoaoe";
           } else {
             alert("Failed to send message");
           }
