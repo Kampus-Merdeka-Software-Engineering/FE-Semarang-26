@@ -69,6 +69,12 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((res) => {
           if (res.ok) {
             alert("Successfully booked an appointment!");
+            document.getElementById("first_name").value = "";
+            document.getElementById("last_name").value= "";
+            document.getElementById("email").value = "";
+            document.getElementById("date").value = "";
+            document.getElementById("select").value = "";
+            document.getElementById("message").value = "";
           } else {
             alert("Failed to book an appointment!");
           }
