@@ -103,6 +103,10 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((res) => {
           if (res.ok) {
             alert("Successfully to sent message");
+            document.getElementById("id").value = "";
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
           } else {
             alert("Failed to send message");
           }
